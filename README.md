@@ -25,7 +25,7 @@ Installation & Usage
 
 1. Clone the repo:
 
-git clone vishalusk/personal-expense-tracker.git
+git clone https://github.com/VishaluSK/Personal-Expense-Tracker.git
 cd personal_expense_tracker
 
 2. Install dependencies:
