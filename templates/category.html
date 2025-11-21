@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Category</title>
+    <style>
+        body {
+            background: #f0f3f7;
+            font-family: Arial;
+            padding: 20px;
+        }
+        .card {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #8e44ad;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #732d91;
+        }
+        .expense-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        a { color: #3498db; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <h2>📂 Search by Category</h2>
+
+    <form method="POST">
+        <input type="text" name="category" placeholder="Enter category..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if category %}
+        <h3>Results for "{{ category }}"</h3>
+
+        {% for e in expenses %}
+        <div class="expense-item">
+            {{ e["name"] }} — ₹{{ e["amount"] }}
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    <a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

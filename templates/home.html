@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <style>
+        body { font-family: Arial; background: #f5f7fa; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 700px; margin: auto; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        h2 { text-align: center; color: #2c3e50; }
+        .btn { text-decoration: none; background: #3498db; color: white; padding: 10px 15px; border-radius: 8px; margin-right: 10px; }
+        .btn:hover { background: #217dbb; }
+        .expense-item { padding: 8px; border-bottom: 1px solid #eee; }
+        .btn-small { padding: 5px 10px; font-size: 0.9em; border-radius: 6px; margin-left: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>💰 Expense Tracker</h2>
+        <a class="btn" href="/add">➕ Add Expense</a>
+        <a class="btn" href="/category">📂 View by Category</a>
+
+        <h3>Total Spent: <strong>₹{{ total }}</strong></h3>
+        <p>🕒 Today: ₹{{ daily }} | This Week: ₹{{ weekly }} | This Month: ₹{{ monthly }}</p>
+    </div>
+
+    <div class="card">
+        <h3>📜 All Expenses</h3>
+        {% for e in expenses %}
+        <div class="expense-item">
+            <strong>{{ e["name"] }}</strong> — ₹{{ e["amount"] }} <span style="float:right;">{{ e["category"] }}
+            <a class="btn btn-small" style="background:#f1c40f;" href="/edit/{{ loop.index0 }}">✏ Edit</a>
+            <a class="btn btn-small" style="background:#e74c3c;" href="/delete/{{ loop.index0 }}">🗑 Delete</a>
+            </span>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>

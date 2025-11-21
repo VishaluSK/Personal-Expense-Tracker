@@ -1,32 +1,57 @@
-# Personal Expense Tracker
-A simple and user-friendly command-line Expense Tracker built using Python. This project helps users record, manage, and analyze their daily expenses. It is perfect for beginners who want to practice Python basics, file handling, OOP, loops, functions, decorators, and error handling.
+Perfect! Here’s a **short, GitHub-ready, beginner-friendly README** version with badges and emojis that you can directly add to your rep
+Personal Expense Tracker
 
-📌 Features
+A simple and beginner-friendly Expense Tracker** built with Python.
+Record, manage, and analyze your daily expenses with ease — either via command-line or web interface (Flask)
 
-➕ Add new expenses (name, amount, category)
-
-📄 View all expenses in a clean table format
-
-🗑️ Delete any expense by name
-
-📁 Saves all data in a JSON file
-
-📊 Category-based summary
-
-🔁 Uses loops, conditions, and sorting
-
-🧱 Built using classes (OOP)
-
-🛡 Error handling for invalid inputs
-
-🧩 Uses external module tabulate for neat output
-
-🎯 Beginner-friendly and easy to extend
+Features
+* Add new expenses (name, amount, category)
+* View all expenses in a clean table
+* Edit or delete any expense
+* Saves all data in a JSON file
+* View expenses by category (supports partial matches)
+* Daily / Weekly / Monthly total spending
+* Error handling for invalid or negative inputs
+* Beginner-friendly and easy to extend
 
 Tech Stack
 
-Python 3
+* Python 3
+* JSON (persistent storage)
+* Flask (optional web interface)
+* tabulate (optional CLI table formatting)
 
-JSON file storage
+Installation & Usage
 
-tabulate library (pip install)
+1. Clone the repo:
+
+git clone vishalusk/personal-expense-tracker.git
+cd personal_expense_tracker
+
+2. Install dependencies:
+pip install flask tabulate
+
+3. Run the CLI version
+python main.py
+
+4. Run the Web version (optional)
+python app.py
+
+Open browser at [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+
+Folder Structure
+
+```
+personal_expense_tracker/
+├─ main.py
+├─ manager.py
+├─ validator.py
+├─ mode.py
+├─ paths.py
+├─ utils.py
+├─ app.py
+├─ templates/
+└─ data/expenses.json
+
+

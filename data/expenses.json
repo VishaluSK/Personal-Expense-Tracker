@@ -3,5 +3,10 @@
         "category": "soaps",
         "amount": 300.0,
         "note": ""
+    },
+    {
+        "category": "Stationary",
+        "amount": 500.0,
+        "note": ""
     }
 ]
