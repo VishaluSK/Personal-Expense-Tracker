@@ -1,8 +1,4 @@
-Perfect! Here’s a **short, GitHub-ready, beginner-friendly README** version with badges and emojis that you can directly add to your rep
 Personal Expense Tracker
-
-A simple and beginner-friendly Expense Tracker** built with Python.
-Record, manage, and analyze your daily expenses with ease — either via command-line or web interface (Flask)
 
 Features
 * Add new expenses (name, amount, category)
