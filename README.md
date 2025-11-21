@@ -1,4 +1,5 @@
 Personal Expense Tracker
+A simple, beginner-friendly expense tracker built with basic Python to help for understanding fundamental programming concepts like variables, functions, file handling, loops, conditionals, and OOP. Perfect for beginners to practice Python while building a practical tool for managing daily expenses.
 
 Features
 * Add new expenses (name, amount, category)
